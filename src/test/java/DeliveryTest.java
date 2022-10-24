@@ -1,20 +1,24 @@
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.SelenideElement;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.openqa.selenium.Keys;
-import util.ScreenShooterReportPortalExtension;
-import org.junit.jupiter.api.extension.Extension;
 
+
+import util.ScreenShooterReportPortalExtension;
 
 import java.time.Duration;
 
-import static com.codeborne.selenide.Selenide.$x;
-import static com.codeborne.selenide.Selenide.open;
-import static sun.java2d.marlin.MarlinUtils.logInfo;
+import static com.codeborne.selenide.Condition.exactText;
+import static com.codeborne.selenide.Selenide.*;
+//import static sun.java2d.marlin.MarlinUtils.logInfo;
+import static util.LoggingUtils.logInfo;
 
-import util.LoggingUtils;
+
+
+
 @ExtendWith({ScreenShooterReportPortalExtension.class})
 
 class DeliveryTest {
